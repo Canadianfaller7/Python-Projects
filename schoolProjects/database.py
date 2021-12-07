@@ -21,7 +21,7 @@ with conn:
 conn.close()
 
 conn = sqlite3.connect('test1.db')
-
+    
 # list of files that we want to use in our database
 fileList = ('information.docx', 'Hello.txt', 'myImage.ong', \
             'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
