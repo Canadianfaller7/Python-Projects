@@ -88,11 +88,13 @@ class User2(User):
         msg = "\nJack frost is a powerful man.\nHe is able to use his secret power to creat {}.\nHowever, his biggest weakness is {}.\n"\
             .format(self.secretPower, self.weakness)
         return msg
-spencer = User1()
-spencer.getLogInInfo()
 
-jack = User2()
+if __name__ == '__main__':
+    spencer = User1()
+    spencer.getLogInInfo()
 
-jack.winter()
-print(jack.aboutJack())
+    jack = User2()
+
+    jack.winter()
+    print(jack.aboutJack())
 
