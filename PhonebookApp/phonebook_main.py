@@ -28,8 +28,8 @@ class ParentWindow(Frame):
         # that we want to make changes to or get data from. its like the address to get to it.
         # so for example, below "self" is simply saying our ParentWindow.master(Frame) so self.master is the ParentWindow(Frame)
         self.master = master
-        self.master.minsize(500,300) # (Height, Width)
-        self.master.maxsize(500,300)
+        self.master.minsize(720,400) # (Height, Width)
+        self.master.maxsize(2560,1080)
 
         # this center window method will center our app on the user's screen
         # this line below is accessing our phonebook_func file because we imported it
