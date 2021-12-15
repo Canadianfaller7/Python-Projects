@@ -19,9 +19,9 @@ class ParentWindow(Frame):
         # this is the title in the tkinter window
         self.master.title("The Tkinter Web Page Demo")
         # this is a lable telling the user what to do
-        self.lbl_fname = tk.Label(self.master, text='Enter in what you want to say on your website: ')
+        self.lbl_webBody = tk.Label(self.master, text='Enter in what you want to say on your website: ')
         # these are just locations of where the label will sit
-        self.lbl_fname.grid(row=0, column=0, padx = (20,0), pady=(10,0), sticky = N+W)
+        self.lbl_webBody.grid(row=0, column=0, padx = (20,0), pady=(10,0), sticky = N+W)
         # this is where the user will input their message of what they want the website to have inside the body tag
         self.txt_1 = tk.Entry(self.master, text = 'Input body for your webpage!')
         self.txt_1.grid(row=1, column=0, rowspan=1, columnspan=2, padx=(30,40), pady=(0,0), sticky = N+E+W)
