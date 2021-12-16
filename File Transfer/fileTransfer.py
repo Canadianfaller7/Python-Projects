@@ -24,10 +24,10 @@ class ParentWindow(Frame):
         # that we want to make changes to or get data from. its like the address to get to it.
         # so for example, below "self" is simply saying our ParentWindow.master(Frame) so self.master is the ParentWindow(Frame)
         self.master = master
-        self.master.minsize(400, 200)
+        self.master.minsize(370, 270)
         self.master.maxsize(2560,1080)
 
-        fileTranferFunc.center_window(self,400,200)
+        fileTranferFunc.center_window(self,370,270)
         self.master.title("The Tkinter File Transfer Demo")
         arg = self.master
         fileTransferGui.loadGui(self)

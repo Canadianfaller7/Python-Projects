@@ -33,14 +33,20 @@ def center_window(self, w, h): # pass in the tkinter frame(master) reference aqn
 
 def pickSource(self):
     source = filedialog.askdirectory()
+    self.txt_fSource.delete(0, END)
+    self.txt_fSource.insert(0, source + '/')
 
 def pickDestination(self):
     destination = filedialog.askdirectory()
+    self.txt_fDestination.delete(0, END)
+    self.txt_fDestination.insert(0, destination + '/')
 
 def moveFiles(self):
+    pickSource = self.txt_fSource.get()
+    pickDestination = self.txt_fDestination.get()
     files = os.listdir(pickSource)
     for i in files:
-        shutil.move(pickSource+i, pickDestination)
+        shutil.copy(pickSource+i, pickDestination)
 
 if __name__ == "__main__":
     pass
