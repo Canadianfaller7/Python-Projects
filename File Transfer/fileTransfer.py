@@ -1,6 +1,5 @@
 import shutil
 import os
-import webbrowser
 from tkinter import *
 from tkinter import filedialog
 import tkinter as tk
@@ -24,9 +23,12 @@ class ParentWindow(Frame):
         # that we want to make changes to or get data from. its like the address to get to it.
         # so for example, below "self" is simply saying our ParentWindow.master(Frame) so self.master is the ParentWindow(Frame)
         self.master = master
+        # this is the max and min window size for the app
         self.master.minsize(370, 270)
         self.master.maxsize(2560,1080)
 
+        # this is to pass in our window size into our function center_window
+        # to center the app on the screen
         fileTranferFunc.center_window(self,370,270)
         self.master.title("The Tkinter File Transfer Demo")
         arg = self.master

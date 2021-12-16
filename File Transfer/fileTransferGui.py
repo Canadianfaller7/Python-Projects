@@ -1,11 +1,11 @@
 import shutil
 import os
-import webbrowser
 from tkinter import *
 from tkinter import filedialog
 import tkinter as tk
 import fileTranferFunc
 import fileTransfer
+
 # this is a lable telling the user what to do
 def loadGui(self):      
 
