@@ -2,24 +2,12 @@ import shutil
 import os
 import webbrowser
 from tkinter import *
+from tkinter import filedialog
 import tkinter as tk
-# source = '/Users/spencermerrill/Desktop/Folder A/'
+import fileTranferFunc
+import fileTransferGui
 
-# destination = '/Users/spencermerrill/Desktop/Folder B/'
 
-# files = os.listdir(source)
-
-# for i in files:
-#     shutil.move(source+i, destination)
-
-# sourceCopy = '/Users/spencermerrill/Desktop/Folder C/'
-
-# destinationCopy = '/Users/spencermerrill/Desktop/Folder D/'
-
-# filesCopy = os.listdir(sourceCopy)
-
-# for i in filesCopy:
-#     shutil.copy(sourceCopy+i, destinationCopy)
 
 
 """ Here is how we can go and create a GUI tkinter app and have it connect with an html file
@@ -36,22 +24,13 @@ class ParentWindow(Frame):
         # that we want to make changes to or get data from. its like the address to get to it.
         # so for example, below "self" is simply saying our ParentWindow.master(Frame) so self.master is the ParentWindow(Frame)
         self.master = master
+        self.master.minsize(400, 200)
+        self.master.maxsize(2560,1080)
+
+        fileTranferFunc.center_window(self,400,200)
         self.master.title("The Tkinter File Transfer Demo")
-        # this is a lable telling the user what to do
-        self.lbl_webBody = tk.Label(self.master, text='Please select the folers that have the files you would like to transfer: ')
-        # these are just locations of where the label will sit
-        self.lbl_webBody.grid(row=0, column=0, padx = (20,20), pady=(10,0), sticky = N+W)
-
-        # this is where we put the button to run our openWeb function and to run everything inside and to execute it and show up when the button is pressed
-        self.btn_add = tk.Button(self.master, width=8, height=2, text='Folder C', command = lambda: (self))
-        self.btn_add.grid(row=8, column=0, padx=(25,0), pady=(45,10), sticky = W)
-
-
-
-
-
-
-
+        arg = self.master
+        fileTransferGui.loadGui(self)
 
 
 if __name__ == '__main__':
