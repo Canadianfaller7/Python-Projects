@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} Django University {% endblock %}
+
+{% block header%}Delete Confirmation:{% endblock %}
+
+{% block content%}
+
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you would like to delete "{{ item.title }}" from the database?</p>
+
+        {{ item.as_p }}
+
+        <input type="submit" value="Yes, delete it." class="btn">
+        <button class="btn" type="button"><a href="{% url 'admin_console' %}">Cancel</a></button>
+    </form>
