@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    Path.joinpath(BASE_DIR, 'assets'),
+    Path.joinpath(BASE_DIR, 'rsc'),
 ]
 
 # Default primary key field type
